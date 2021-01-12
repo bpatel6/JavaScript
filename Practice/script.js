@@ -7,14 +7,10 @@ function ageInDays() {
     var textAnswer = document.createTextNode('You are ' + ageInDays + ' days old');
     h1.setAttribute('id', 'ageInDays');
     h1.appendChild(textAnswer);
-    if (document.getElementById('flex-box-result') != null) {
-        document.getElementById("flex-box-result").childNodes[0].replaceWith(h1);
-    } else {
-        document.getElementById('flex-box-result').appendChild(h1);
-    }
+    document.getElementById('flex-box-result').appendChild(h1);
 }
 
 function reset() {
-    document.getElementById('ageInDays').remove();
+    document.getElementById('flex-box-result').remove();
 }
 
